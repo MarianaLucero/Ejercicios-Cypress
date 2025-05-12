@@ -1,0 +1,8 @@
+- En la página de la Tienda Online de Movistar, solo tenían las opciones de cuotas desde 6.
+
+- Por errores de jQuery, añadí el siguente código al comienzo:
+   Cypress.on('uncaught:exception', (err, runnable) => {
+  if (err.message.includes("jQuery.easing")) {
+    return false; // previene que Cypress falle el test
+  }
+   });
